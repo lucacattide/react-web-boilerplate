@@ -1,7 +1,7 @@
 # [Boilerplate] React - Web
 
-[![GitHub release](https://img.shields.io/badge/Release-2.7-lightgrey.svg)](https://github.com/lucacattide/web-boilerplate/releases/tag/2.7)
-[![GitHub contributors](https://img.shields.io/badge/Contributors-1-lightgrey.svg)](https://github.com/lucacattide/web-boilerplate/graphs/contributors)
+[![GitHub release](https://img.shields.io/badge/Release-1.0-lightgrey.svg)](https://github.com/lucacattide/react-web-boilerplate/releases/tag/1.0)
+[![GitHub contributors](https://img.shields.io/badge/Contributors-1-lightgrey.svg)](https://github.com/lucacattide/react-web-boilerplate/graphs/contributors)
 
 ## Team
 
