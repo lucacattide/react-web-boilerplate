@@ -1,0 +1,6 @@
+# Repository - Configurazione
+
+/log/
+/node_modules/
+/.editorconfig
+.vscode

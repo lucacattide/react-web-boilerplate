@@ -1,0 +1,44 @@
+{
+  "private": true,
+  "name": "",
+  "version": "1.0.0",
+  "description": "© Luca Cattide 2019. Tutti i Diritti riservati.",
+  "homepage": "https://",
+  "bugs": {
+    "url": "",
+    "email": "l.cattide@email.it"
+  },
+  "license": {
+    "license": "LICENSE"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "@zeit/next-sass": "^1.0.1",
+    "autoprefixer": "^9.4.7",
+    "compass-mixins": "^0.12.10",
+    "express": "^4.16.4",
+    "isomorphic-unfetch": "^3.0.0",
+    "next": "^7.0.2",
+    "node-sass": "^4.11.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "next start -p 8000",
+    "start-prod": "NODE_ENV=production node server.js",
+    "export": "next export",
+    "postexport": "node scripts/postExpots.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:lucacattide/react-web-boilerplate.git"
+  },
+  "keywords": [
+    "luca",
+    "cattide"
+  ],
+  "author": "Luca Cattide - Front-End Web Developer <info@lucacattide.it> | Luca Cattide (https://lucacattide.it)"
+}
