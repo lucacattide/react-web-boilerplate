@@ -2,11 +2,11 @@
   "modules": {
     "byIdentifier": {
       "external \"react\"": 0,
-      "external \"jQuery\"": 1,
-      "external \"@babel/runtime/regenerator\"": 2,
-      "external \"next/document\"": 3,
-      "node_modules/ignore-loader/index.js!sass/index.scss": 4,
-      "external \"next/app\"": 5,
+      "external \"@babel/runtime/regenerator\"": 1,
+      "external \"next/document\"": 2,
+      "node_modules/ignore-loader/index.js!sass/index.scss": 3,
+      "external \"next/app\"": 4,
+      "external \"next/dynamic\"": 5,
       "external \"next/head\"": 6,
       "multi ./pages/_app.js": 7,
       "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/_app.js": 8,
@@ -16,8 +16,10 @@
       "multi node_modules/next/dist/pages/_error.js": 12,
       "node_modules/next/dist/pages/_error.js": 13,
       "external \"next/error\"": 14,
-      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/index.js 5fa0f94fd1e033ef1c62662fdf724378": 15,
-      "external \"jquery\"": 1
+      "external \"jquery\"": 15,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!components/TornaSu.js": 16,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!components/Cookies.js": 17,
+      "node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!pages/index.js 525cfcea76f0f681a56cb013f10c3730": 18
     },
     "usedIds": {
       "0": 0,
@@ -35,34 +37,30 @@
       "12": 12,
       "13": 13,
       "14": 14,
-      "15": 15
+      "15": 15,
+      "16": 16,
+      "17": 17,
+      "18": 18
     }
   },
   "chunks": {
     "byName": {
-      "static/2N9z3nTcP4aIlP0sVUiIQ/pages/_app.js": 0,
-      "static/2N9z3nTcP4aIlP0sVUiIQ/pages/_document.js": 1,
-      "static/2N9z3nTcP4aIlP0sVUiIQ/pages/index.js": 2,
-      "static/2N9z3nTcP4aIlP0sVUiIQ/pages/_error.js": 3,
-      "static/VVu8xPT4fvtMOOTqNhsC4/pages/_app.js": 4,
-      "static/VVu8xPT4fvtMOOTqNhsC4/pages/_document.js": 5,
-      "static/VVu8xPT4fvtMOOTqNhsC4/pages/index.js": 6,
-      "static/VVu8xPT4fvtMOOTqNhsC4/pages/_error.js": 7,
-      "static/sJOK7jhCqlVJtfcCE9yy7/pages/_app.js": 0,
-      "static/sJOK7jhCqlVJtfcCE9yy7/pages/_document.js": 1,
-      "static/sJOK7jhCqlVJtfcCE9yy7/pages/index.js": 2,
-      "static/sJOK7jhCqlVJtfcCE9yy7/pages/_error.js": 3,
-      "static/KKCQEQ2lBvXLx1sIGmElk/pages/_app.js": 4,
-      "static/KKCQEQ2lBvXLx1sIGmElk/pages/_document.js": 5,
-      "static/KKCQEQ2lBvXLx1sIGmElk/pages/index.js": 6,
-      "static/KKCQEQ2lBvXLx1sIGmElk/pages/_error.js": 7
+      "static/QEJDJip~F_Ayoki7JWNZo/pages/_app.js": 0,
+      "static/QEJDJip~F_Ayoki7JWNZo/pages/_document.js": 1,
+      "static/QEJDJip~F_Ayoki7JWNZo/pages/index.js": 2,
+      "static/QEJDJip~F_Ayoki7JWNZo/pages/_error.js": 3
     },
-    "bySource": {},
+    "bySource": {
+      "0 node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!components/Layout.js ../components/TornaSu": 4,
+      "0 node_modules/next/dist/build/webpack/loaders/next-babel-loader.js??ref--4!components/Layout.js ../components/Cookies": 5
+    },
     "usedIds": [
+      0,
+      1,
+      2,
+      3,
       4,
-      5,
-      6,
-      7
+      5
     ]
   }
 }

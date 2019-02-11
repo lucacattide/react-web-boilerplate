@@ -1,6 +1,8 @@
 # Repository - Configurazione
 
-/log/
-/node_modules/
+/log
+/node_modules
+/out
 /.editorconfig
+/.sass-cache
 .vscode

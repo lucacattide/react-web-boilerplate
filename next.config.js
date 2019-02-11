@@ -30,11 +30,13 @@ module.exports = withSass({
     ],
   },
   // JS
-  webpack: (config, {}) => {
-    config.externals.push({
-      // jQuery
-      jquery: 'jQuery'
-    })
+  webpack: (config, {isServer}) => {
+    if (!isServer) {
+      config.externals.push({
+        // jQuery
+        jquery: 'jQuery'
+      })
+    }
 
     return config
   },

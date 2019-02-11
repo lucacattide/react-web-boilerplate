@@ -1,11 +1,20 @@
 // Inizio Modulo
 // Importazione Librerie
 import '../sass/index.scss'
+import dynamic from 'next/dynamic'
 import Header from './Header'
 import Footer from './Footer'
-import TornaSu from './TornaSu'
-import Cookies from './Cookies'
 
+const TornaSuNoSsr = dynamic(() =>
+  import ('../components/TornaSu'), {
+    ssr: false
+  }
+)
+const CookiesNoSsr = dynamic(
+  import ('../components/Cookies'), {
+    ssr: false
+  }
+)
 // Layout
 const Layout = (props) => (
   <div className="container">
@@ -15,8 +24,8 @@ const Layout = (props) => (
       {props.children}
     </main>
     <Footer />
-    <TornaSu />
-    <Cookies />
+    <TornaSuNoSsr />
+    <CookiesNoSsr />
   </div>
 )
 
