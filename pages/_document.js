@@ -1,5 +1,5 @@
-// Inizio Modulo
-// Importazione Librerie
+// Module Start
+// JS imports
 import Document, { Head, Main, NextScript } from 'next/document'
 
 /**
@@ -20,9 +20,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <html lang="" prefix="og: http://ogp.me/ns#">
-        {/* Inizio Head */}
+        {/* Head Start */}
         <Head>
-          {/* Inizio Meta Tags */}
+          {/* Meta Tags Start */}
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -38,22 +38,35 @@ export default class MyDocument extends Document {
           <meta name="og:locale" property="og:locale" content="it_IT" />
           <meta name="og:locale:alternate" property="og:locale:alternate" content="" />
           <meta name="og:site_name" property="og:site_name" content="" />
-          {/* Fine Meta Tags */}
-          {/* Inizio Preload */}
-          <link rel="preload" href="//code.jquery.com/jquery-3.3.1.min.js" as="script"></link>
-          {/* Fine Preload */}
-          <link rel="icon dns-prefetch" type="image/png" href="../favicon.png"></link>
+          <meta name="apple-mobile-web-app-capable" content="yes" />
+          <meta name="apple-mobile-web-app-status-bar-style" content="" />
+          <meta name="apple-mobile-web-app-title" content="" />
+          <meta name="theme-color" content="#" />
+          {/* Meta Tags End */}
+          {/* Preload Start */}
+          <link rel="preload" href="static/manifest.json" as="script" />
+          <link rel="preload" href="//code.jquery.com/jquery-3.4.1.min.js" as="script" />
+          <link rel="preload" href="static/js/refresh.js" as="script" />
+          <link rel="preload" href="static/js/install.js" as="script" />
+          {/* Preload End */}
+          <link rel="icon dns-prefetch" type="image/png" href="../favicon.png" />
+          {/* TODO: Must be 152x152 px PNG */}
+          <link rel="apple-touch-icon dns-prefetch" href="static/img/" />
+          <link rel="manifest dns-prefetch" href="static/manifest.json" />
         </Head>
-        {/* Fine Head */}
-        {/* Inizio Body */}
+        {/* Head End */}
+        {/* Body Start */}
         <body>
-          {/* Inizio Container */}
+          {/* Container Start */}
           <Main />
-          {/* Fine Container */}
-          <script src="//code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+          {/* Container End */}
+          <script src="//code.jquery.com/jquery-3.4.1.min.js"
+          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
           crossOrigin="anonymous"></script>
           <NextScript />
-          {/* Inizio Rich Snippets */}
+          <script async defer type="module" src="static/js/refresh.js"></script>
+          <script async defer src="static/js/install.js"></script>
+          {/* Rich Snippets Start */}
           <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: `
             {
               "@context": "http://schema.org",
@@ -101,9 +114,9 @@ export default class MyDocument extends Document {
               "url": "http://"
             }
           `}} />
-          {/* Fine Rich Snippets */}
+          {/* Rich Snippets End */}
         </body>
-        {/* Fine Body */}
+        {/* Body End */}
       </html>
     )
   }

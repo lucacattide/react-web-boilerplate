@@ -1,17 +1,17 @@
-// Inizio Modulo
-// Importazione Librerie
+// Module Start
+// SASS imports
 import '../sass/index.scss'
 
 // Header
 const Header = () => (
   <>
-    {/* Inizio Footer */}
+    {/* Header Start */}
     <footer className="header">
     </footer>
-    {/* Fine Footer */}
+    {/* Header End */}
   </>
 )
 
-// Esportazione Moduli
+// Module export
 export default Header
-// Fine Modulo
+// Module End

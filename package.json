@@ -2,7 +2,7 @@
   "private": true,
   "name": "",
   "version": "1.0.0",
-  "description": "© Luca Cattide 2019. Tutti i Diritti riservati.",
+  "description": "© Luca Cattide 2018. All Rights reserved.",
   "homepage": "https://",
   "bugs": {
     "url": "",
@@ -13,40 +13,66 @@
   },
   "main": "index.js",
   "dependencies": {
-    "@zeit/next-sass": "^1.0.1",
-    "autoprefixer": "^9.4.7",
-    "compass-mixins": "^0.12.10",
-    "express": "^4.16.4",
+    "apollo-boost": "^0.4.3",
+    "express": "^4.17.1",
+    "graphql": "^14.4.0",
     "isomorphic-unfetch": "^3.0.0",
-    "jquery": "^3.3.1",
-    "next": "^7.0.2",
-    "node-sass": "^4.11.0",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "jquery": "^3.4.1",
+    "next": "canary",
+    "next-offline": "^4.0.2",
+    "react": "^16.8.6",
+    "react-apollo": "^2.5.8",
+    "react-dom": "^16.8.6"
   },
   "devDependencies": {
-    "@cedx/gulp-php-minify": "^9.1.1",
-    "fs-extra": "^7.0.1",
-    "gulp": "^3.9.1",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@cedx/gulp-php-minify": "^9.3.0",
+    "@zeit/next-sass": "^1.0.1",
+    "autoprefixer": "^9.6.0",
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-jest": "^24.8.0",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "compass-mixins": "^0.12.10",
+    "enzyme": "3.4.3",
+    "enzyme-adapter-react-16": "1.2.0",
+    "eslint-plugin-jest": "^22.7.1",
+    "fs-extra": "^8.0.1",
+    "gulp": "^4.0.2",
+    "gulp-babel": "^8.0.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-size": "^3.0.0"
+    "gulp-size": "^3.0.0",
+    "jest": "^24.8.0",
+    "json-loader": "^0.5.7",
+    "midas": "^2.0.3",
+    "node-sass": "^4.12.0",
+    "postcss-import": "^12.0.1",
+    "postcss-load-config": "^2.1.0",
+    "postcss-loader": "^3.0.0",
+    "postcss-scss": "^2.0.0",
+    "react-addons-test-utils": "15.6.2",
+    "react-test-renderer": "16.4.2",
+    "sugarss": "^2.0.0"
   },
   "scripts": {
+    "test": "jest",
     "dev": "node server.js",
     "build": "next build",
     "start": "next start -p 8000",
     "start-prod": "NODE_ENV=production node server.js",
     "export": "next export",
-    "postexport": "node scripts/postExport.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "postexport": "node scripts/postExport.js"
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:lucacattide/react-web-boilerplate.git"
+    "url": ""
   },
   "keywords": [
     "luca",
     "cattide"
   ],
-  "author": "Luca Cattide - Front-End Web Developer <info@lucacattide.it> | Luca Cattide (https://lucacattide.it)"
+  "author": "Luca Cattide - Senior Frontend Developer <info@lucacattide.it> | LC (https://lucacattide.it)"
 }

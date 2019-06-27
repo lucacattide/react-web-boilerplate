@@ -1,26 +1,35 @@
-// Server - Configurazione
+// Server - Configuration
 'use strict';
 
+const {join} = require('path');
 const express = require('express');
 const next = require('next');
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({dev});
 const handle = app.getRequestHandler();
+const serviceWorker = (app) => (req, res) => {
+  const filePath = join(__dirname, '.next', 'service-worker.js');
+
+  app.serveStatic(req, res, filePath);
+};
 
 app.prepare()
     .then(() => {
       const server = express();
 
-      // Route personalizzata
-      // Effettua il mapping per il server rendering degli URL SEF
-      // TODO: Sostituire con path e parametri reali
+      // Service Worker
+      server.get('/service-worker.js', serviceWorker(app));
+      // Custom route
+      // URL SEF server rendering mapping
+      // TODO: Change with parameters and real paths
       server.get('/:id', (req, res) => {
-        const pagina = '/';
-        // TODO: Sostituire con parametri reali
-        const parametri = {id: req.params.id};
+        const page = '/';
+        // TODO: Change with parameters and real paths
+        const parameters = {id: req.params.id};
 
-        app.render(req, res, pagina, parametri);
+        app.render(req, res, page, parameters);
       });
+      // General
       server.get('*', (req, res) => {
         return handle(req, res);
       });

@@ -1,8 +1,10 @@
-// Inizio Modulo
-// Importazione Librerie
+// Module Start
+// JS imports
 import App, {Container} from 'next/app'
 import Head from 'next/head'
 import React from 'react'
+import withApolloClient from '../backend/with-apollo-client'
+import { ApolloProvider } from 'react-apollo'
 
 /**
  * @description App - Override
@@ -12,24 +14,23 @@ import React from 'react'
  * @class MyApp
  * @extends {App}
  */
-export default class MyApp extends App {
-  static async getInitialProps ({ Component, router, ctx }) {
-    let pageProps = {}
-
-    if (Component.getInitialProps) {
-      pageProps = await Component.getInitialProps(ctx)
-    }
-
-    return {pageProps}
-  }
-
+ class MyApp extends App {
   render () {
-    const {Component, pageProps} = this.props
-    return <Container>
-      <Head>
-        <title></title>
-      </Head>
-      <Component {...pageProps} />
-    </Container>
+    const {Component, pageProps, apolloClient} = this.props
+
+    return (
+      <Container>
+        <ApolloProvider client={apolloClient}>
+          <Head>
+            <title></title>
+          </Head>
+          <Component {...pageProps} />
+        </ApolloProvider>
+      </Container>
+    )
   }
 }
+
+// Module Export
+export default withApolloClient(MyApp)
+// Module End

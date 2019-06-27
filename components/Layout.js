@@ -1,12 +1,13 @@
-// Inizio Modulo
-// Importazione Librerie
+// Module Start
+// SASS imports
 import '../sass/index.scss'
+// JS imports
 import dynamic from 'next/dynamic'
 import Header from './Header'
 import Footer from './Footer'
 
-const TornaSuNoSsr = dynamic(() =>
-  import ('../components/TornaSu'), {
+const BackToTopNoSsr = dynamic(() =>
+  import ('../components/BackToTop'), {
     ssr: false
   }
 )
@@ -19,16 +20,16 @@ const CookiesNoSsr = dynamic(
 const Layout = (props) => (
   <div className="container">
     <Header />
-    {/* Inizio Main */}
+    {/* Main Start */}
     <main className="container__wrapper">
       {props.children}
     </main>
     <Footer />
-    <TornaSuNoSsr />
+    <BackToTopNoSsr />
     <CookiesNoSsr />
   </div>
 )
 
-// Esportazione Moduli
+// Module export
 export default Layout
-// Fine Modulo
+// Module End

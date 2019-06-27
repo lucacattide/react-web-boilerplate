@@ -1,8 +1,9 @@
-# Repository - Configurazione
-
+# Repository - Configuration
 /log
 /node_modules
 /out
 /.editorconfig
+/.next
 /.sass-cache
-.vscode
+/.vscode
+.DS_Store

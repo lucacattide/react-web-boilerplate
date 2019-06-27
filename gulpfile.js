@@ -1,11 +1,13 @@
-// Gulp - Configurazione
+// Gulp - Configuration
 'use strict';
 
-// Inclusione Moduli
+// Modules import
 const gulp = require('gulp');
 const htmlmin = require('gulp-htmlmin');
 const size = require('gulp-size');
-const {phpMinify} = require('@cedx/gulp-php-minify');
+const {
+  phpMinify
+} = require('@cedx/gulp-php-minify');
 
 // Tasks
 // PHP
@@ -22,7 +24,7 @@ gulp.task('php', () => gulp.src('./**/*.php', {
     .pipe(size())
     .pipe(gulp.dest('./out'))
 );
-// Produzione
-gulp.task('dist', [
+// Production
+gulp.task('dist', gulp.parallel(
   'php',
-]);
+));

@@ -1,32 +1,32 @@
-// Popolamento sitemap
+// Sitemap population
 'use strict';
 
 const fs = require('fs');
 
-// Esportazione Modulo
+// Module Export
 module.exports = () => {
-  const pagine = {};
+  const pages = {};
   const walkSync = (dir) => {
-    // Pagine
+    // Pages
     const files = fs.readdirSync(dir);
 
     files.forEach((file) => {
-      // Path pagina
+      // Pages path
       const filePath = `${dir}${file}`;
-      // Statistiche pagina
+      // Pages stats
       const fileStat = fs.statSync(filePath);
 
-      // Navigazione ricorsiva
+      // Recursive navigation
       if (fileStat.isDirectory()) {
         walkSync(`${filePath}/`);
       } else {
-        // Pathname pagina - esclusa cartella "pages" ed estensioni
+        // Page pathname - "pages" directory and extensions excluded
         const nomeFile = filePath
             .substr(0, filePath.lastIndexOf('.'))
             .replace('pages/', '');
 
-        // Crea nodo sitemap pagina ed ultima modifica
-        pagine[`/${nomeFile}`] = {
+        // Create sitemap page node and last modify
+        pages[`/${nomeFile}`] = {
           page: `/${nomeFile}`,
           lastModified: fileStat.mtime,
         };
@@ -34,8 +34,8 @@ module.exports = () => {
     });
   };
 
-  // Popola la sitemap ricorsivamente
+  // Recursive sitemap population
   walkSync('pages/');
 
-  return pagine;
+  return pages;
 };

@@ -1,5 +1,5 @@
-// Inizio Modulo
-// Importazione Librerie
+// Module Start
+// JS imports
 import Layout from '../components/Layout.js'
 
 // Main
@@ -8,6 +8,6 @@ const Index = () => (
   </Layout>
 )
 
-// Esportazione Moduli
+// Module export
 export default Index
-// Fine Modulo
+// Module End
