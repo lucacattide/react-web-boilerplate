@@ -1,7 +1,7 @@
 # [Boilerplate] React - Web
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/lucacattide/react-web-boilerplate.svg?style=for-the-badge)
-[![GitHub release](https://img.shields.io/badge/Release-3.0.0-lightgrey.svg?style=for-the-badge)](https://github.com/lucacattide/react-web-boilerplate/releases/tag/3.0.0)
+[![GitHub release](https://img.shields.io/badge/Release-2.0.0-lightgrey.svg?style=for-the-badge)](https://github.com/lucacattide/react-web-boilerplate/releases/tag/2.0.0)
 ![Github All Releases downloads](https://img.shields.io/github/downloads/lucacattide/react-web-boilerplate/total.svg?style=for-the-badge)
 [![GitHub contributors](https://img.shields.io/badge/Contributors-1-lightgrey.svg?style=for-the-badge)](https://github.com/lucacattide/react-web-boilerplate/graphs/contributors)
 ![GitHub issues](https://img.shields.io/github/issues/lucacattide/react-web-boilerplate.svg?style=for-the-badge)
