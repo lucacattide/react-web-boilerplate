@@ -91,7 +91,7 @@ Third-party linter plugins like ESLint, Beautify, Prettier or any other similar 
     * __/Gemfile.lock:__ Deploy Manager dependencies file (_Capistrano_);
 	* __/gulpfile.js:__ Front-End task-runner configuration files (_Gulp_);
     * __/jest.*.js:__ Unit testing plugin configuration files (_Jest_);
-    * __/next.*.js:__ Front-End Framework configuration files (_Next_);
+    * __/next.config.js:__ Front-End Framework configuration files (_Next_);
     * __/postcss.config.js:__ Module plugin bundler configuration files (_Webpack_);
     * __/robots.txt:__ Robots configuration file;
     * __/server.js:__ Full-Stack Front-End configuration file (_NodeJS_);
@@ -105,11 +105,6 @@ I.e.
     /__tests__/
     /components/
     /config/
-    !/js/frontend/install.js
-    !/js/frontend/refresh.js
-    !/js/frontend/lib/*
-    /js/frontend/*
-    /js/frontend/lib/workbox/*
     /lib/
     /log/
     /node_modules/
