@@ -1,0 +1,234 @@
+// IMG PATH: /static/img/<filename>
+// SASS Start
+// Imports Start
+@import 'compass/css3';
+@import 'compass/typography/links/link-colors';
+
+// Imports End
+// Variables Start
+// Colors
+// Fonts
+// Fonts - Dimensions
+$font-size-desktop: 14px;
+$font-size-mobile: 12px;
+$font-size-rem: 62.5%;
+// Resolutions
+$desktop: 992px;
+$desktop-hd: 1200px;
+$tablet: 768px;
+$smartphone: 576px;
+// Media Queries
+$media-desktop: 'min-width: #{$desktop}';
+$media-desktop-hd: 'min-width: #{$desktop-hd}';
+$media-tablet: 'min-width: #{$tablet}';
+$media-smartphone: 'min-width: #{$smartphone}';
+$media-local: 'display-mode: standalone';
+
+// Classes
+%cover,
+%background,
+%sprites {
+
+  @extend %background-base;
+}
+
+%body,
+%font-bold,
+%font-italic,
+%link {
+
+  @extend %font;
+}
+
+%font-bold,
+%link {
+  font-weight: 600;
+}
+
+%background {
+  background-position: 0 0;
+  background-size: 100%;
+}
+
+%background-base {
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+}
+
+%body {
+  font-weight: 400;
+}
+
+%center {
+  text-align: center;
+}
+
+%cover {
+  background-position: center;
+  background-size: cover;
+}
+
+%font {
+  font-family: '', sans-serif;
+}
+
+%font-italic {
+  font-style: italic;
+}
+
+%image {
+  height: auto;
+  width: 100%;
+}
+
+%uppercase {
+  text-transform: uppercase;
+}
+
+// General
+// Links
+a,
+button {
+  text-decoration: none !important;
+}
+
+// Outline
+a:focus,
+button:focus,
+input:focus,
+textarea:focus,
+.btn:focus {
+  outline: none !important;
+}
+
+// Buttons
+input[type='submit'] {
+  appearance: none !important;
+  border-radius: 0 !important;
+}
+
+// Layout
+.blocked {
+  overflow: hidden !important;
+}
+
+.break {
+  display: inline-block;
+  flex-basis: 100%;
+  height: 0;
+  overflow: hidden;
+  width: 0;
+
+  @media (min-height: 640px) {
+    display: none;
+  }
+}
+
+.clear {
+  clear: both;
+}
+
+// Interaction
+.disable {
+  user-select: none;
+}
+
+.deactivate {
+  pointer-events: none;
+}
+
+// Formatting
+.foreign {
+
+  @extend %font-italic;
+}
+
+// Validation
+.invalid {
+  box-shadow: 0 0 0 1px $red !important;
+}
+
+// SEO
+mark {
+  background-color: transparent !important;
+  color: inherit;
+  padding: 0 !important;
+}
+
+// Visibility
+.hidden {
+  display: none !important;
+}
+
+.invisible {
+  visibility: hidden !important;
+}
+
+.occult {
+  opacity: 0 !important;
+}
+
+strong {
+
+  @extend %font-bold;
+}
+
+// Template
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track-piece,
+body::-webkit-scrollbar-corner,
+body::-webkit-resizer,
+.scrollbar::-webkit-scrollbar,
+.scrollbar::-webkit-scrollbar-track,
+.scrollbar::-webkit-scrollbar-track-piece,
+.scrollbar::-webkit-scrollbar-corner,
+.scrollbar::-webkit-resizer {
+  background-color: ;
+}
+
+body::-webkit-scrollbar-button,
+body::-webkit-scrollbar-thumb,
+.scrollbar::-webkit-scrollbar-button,
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: ;
+}
+
+// HTML
+html {
+  font-size: $font-size-rem;
+
+  // Body
+  body {
+    background-color: $blue;
+    font-size: $font-size-mobile;
+    overflow-x: hidden;
+
+    @media ($media-tablet) {
+      font-size: $font-size-desktop;
+    }
+
+    // Container
+    .container {
+
+      @include display-flex;
+      @include flex-direction(column);
+
+      height: auto;
+      min-height: 100vh;
+      width: 100% !important;
+
+      &#{__wrapper} {
+        -webkit-box-flex: 1 0 0;
+        -ms-flex: 1 0 0;
+        flex: 1 0 0;
+      }
+    }
+
+    h6 {
+      display: none;
+    }
+  }
+}
+
+// Fine SCSS

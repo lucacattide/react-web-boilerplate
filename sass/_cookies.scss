@@ -1,0 +1,245 @@
+// SCSS Start
+// Cookies
+.cookies {
+
+  @extend %center;
+
+  background-color: ;
+  bottom: 0;
+  left: 0;
+  padding: 1em 16px;
+  overflow: hidden;
+  position: fixed;
+  right: 0;
+  top: auto;
+  z-index: 9999;
+
+  &.opened {
+    top: 0 !important;
+  }
+
+  &.closed {
+    align-items: flex-start !important;
+    background-color: transparent !important;
+    bottom: 8em !important;
+    left: 16px !important;
+    max-width: 50%;
+    padding: 0 !important;
+    right: auto !important;
+    top: auto !important;
+
+    &.mobile {
+      bottom: 1em !important;
+
+      @media (min-height: 640px) {
+        bottom: 5.5em !important;
+      }
+
+      @media ($media-desktop) {
+        bottom: 6.5em !important;
+        left: 32px !important;
+      }
+
+      @media (min-width: 1920px) {
+        bottom: 1.5em !important;
+        left: 16px !important;
+      }
+    }
+  }
+
+  &,
+  &#{__container},
+  .body__close,
+  .body__link,
+  .label__checkbox,
+  .label__link {
+    transition: all .3s ease-in-out;
+  }
+
+  &#{__cta},
+  .container__body,
+  .container__cta,
+  .form__label {
+    font-size: ;
+  }
+
+  .body__close,
+  .body__link,
+  .label__link {
+    color: $blue-1;
+
+    &:hover {
+      opacity: .7;
+    }
+  }
+
+  .container__body,
+  .body__close,
+  .form__label {
+
+    @extend %body;
+  }
+
+  &,
+  &#{__form} {
+
+    @include display-flex;
+    @include flex-direction(column);
+  }
+
+  &,
+  .cookies__form {
+    align-items: center;
+  }
+
+  .container__body,
+  .form__label {
+    color: ;
+    line-height: ;
+  }
+
+  &#{__container} {
+    padding: 0 0 1em;
+    width: 100%;
+
+    &.closed {
+      padding: 1em 0 !important;
+    }
+
+    &.opened {
+      height: 100%;
+      text-align: center !important;
+    }
+
+    .container__body {
+
+      @extend %center;
+
+      margin: 0 auto 2em;
+      width: 88%;
+
+      .body__close {
+        font-size: ;
+        position: absolute;
+      }
+
+      .body__close--notification {
+        right: 16px;
+        top: 16px;
+
+        &.fixed {
+          right: 0 !important;
+          top: 0 !important;
+        }
+      }
+
+      .body__close--settings {
+        right: 0;
+        top: 0;
+      }
+
+      .body__link {
+
+        @extend %font;
+      }
+    }
+
+    .container__cta {
+
+      @extend %cta;
+
+      &.opened {
+        margin: 2em 16px;
+
+        @media ($media-smartphone) {
+          margin: 0 16px;
+        }
+      }
+    }
+  }
+
+  &#{__form} {
+    margin: 0 auto 1em;
+    outline: none;
+    text-align: left;
+
+    @media ($media-tablet) {
+      max-width: 62%;
+    }
+
+    @media ($media-desktop) {
+      max-width: 48%;
+    }
+
+    @media ($media-desktop-hd) {
+      max-width: 38%;
+    }
+
+    @media (min-width: 1920px) {
+      max-width: 24%;
+    }
+
+    .form__label {
+      margin: 0 0 1em;
+      padding: 0 0 0 32px;
+      position: relative;
+
+      @media ($media-smartphone) {
+        width: 62%;
+      }
+
+      &:hover &#{__checkbox} {
+        box-shadow: 0 0 0 1px ;
+      }
+
+      .label__field,
+      .label__checkbox,
+      .label__checkbox::after {
+        position: absolute;
+      }
+
+      .label__field {
+        appearance: none;
+        border: 0;
+        margin: 0;
+        opacity: 0;
+      }
+
+      .label__field:checked + .label__checkbox {
+        background-color: ;
+      }
+
+      .label__checkbox {
+        background-color: ;
+        height: 12px;
+        left: 0;
+        top: .5em;
+        width: 12px;
+      }
+    }
+
+    .form__legend {
+      display: none;
+    }
+  }
+
+  &#{--settings} {
+    overflow-x: hidden;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar,
+    &::-webkit-scrollbar-track,
+    &::-webkit-scrollbar-track-piece,
+    &::-webkit-scrollbar-corner,
+    &::-webkit-resizer {
+      background-color: ;
+    }
+
+    &::-webkit-scrollbar-button,
+    &::-webkit-scrollbar-thumb {
+      background-color: ;
+    }
+  }
+}
+
+// SCSS End

@@ -1,0 +1,10 @@
+# Repository - Configuration
+/node_modules
+/out
+/.editorconfig
+/.next
+/.sass-cache
+/.vscode
+.DS_Store
+.env
+.env.build

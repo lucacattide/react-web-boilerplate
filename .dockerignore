@@ -1,0 +1,8 @@
+node_modules
+out
+static/img/cms
+.editorconfig
+.next
+.sass-cache
+.vscode
+.DS_Store

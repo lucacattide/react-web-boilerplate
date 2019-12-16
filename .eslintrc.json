@@ -1,0 +1,18 @@
+{
+  "extends": ["eslint:recommended", "google", "plugin:jest/recommended"],
+  "parserOptions": {
+    "ecmaVersion": 6,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react-hooks",
+    "jest"
+  ],
+  "rules": {
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn"
+  },
+  "env": {
+    "jest/globals": true
+  }
+}

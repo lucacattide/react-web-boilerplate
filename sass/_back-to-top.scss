@@ -1,0 +1,54 @@
+// SCSS Start
+// Back to Top
+.back-to-top {
+  background-color: $beige-1;
+  border-radius: 0 20px;
+  bottom: 1.5em;
+  color: $blue;
+  height: 48px;
+  right: 16px;
+  transition: background-color .5s ease-in-out, border-radius .3s ease-in-out;
+  width: 48px;
+  z-index: 9999;
+
+  @media (min-height: 640px) {
+    bottom: 5.5em;
+  }
+
+  @media ($media-desktop) {
+    bottom: 6.5em;
+    right: 32px;
+  }
+
+  @media (min-width: 1920px) {
+    bottom: 1.5em;
+    right: 16px;
+  }
+
+  &:hover {
+    background-color: $beige;
+    border-radius: 20px 0;
+  }
+
+  &.under {
+    bottom: -1000% !important;
+  }
+
+  &,
+  .back-to-top__arrow {
+
+    @extend %body;
+
+    position: fixed;
+    transform: rotate(90deg);
+    transform-origin: center;
+  }
+
+  .back-to-top__arrow {
+    font-size: $font-size-back-to-top;
+    left: 14px;
+    top: -5px;
+  }
+}
+
+// SCSS End
