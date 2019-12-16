@@ -16,7 +16,7 @@ const Cookies = (props) => (
     <div className="cookies__container cookies--notification opened">
       <h6>Notification</h6>
       <p className="container__body">
-        Luca Cattide &lt;&gt; Blog {props.labels.cookies.label1}.<br />
+        stack {props.labels.cookies.label1}.<br />
         {props.labels.cookies.label2} <a className="body__link" href="privacy" title={props.labels.cookies.title1} tabIndex={100} target="new">{props.labels.cookies.link1} </a>
         {props.labels.cookies.label3}.
         <a className="body__close body__close--notification disable" href="#" title={props.labels.cookies.title2}
@@ -53,38 +53,6 @@ const Cookies = (props) => (
           <span className="label__checkbox"></span>
           Google ({props.labels.cookies.label14}) -
           <a className="label__link" href="https://tinyurl.com/y96a7je2" title="Cookie Policy - Google" tabIndex={306} target="new" rel="noopener">
-            {props.labels.cookies.label15}
-          </a>
-        </label>
-        <label className="form__label" htmlFor="linkedin-cookie">
-          <input id="linkedin-cookie" className="label__field" type="checkbox" name="linkedin-cookie" tabIndex={107} value="linkedin_stack" />
-          <span className="label__checkbox"></span>
-          LinkedIn (Social Links) -
-          <a className="label__link" href="https://tinyurl.com/omf5h5q" title="Cookie Policy - LinkedIn" tabIndex={307} target="new" rel="noopener">
-            {props.labels.cookies.label15}
-          </a>
-        </label>
-        <label className="form__label" htmlFor="github-cookie">
-          <input id="github-cookie" className="label__field" type="checkbox" name="github-cookie" tabIndex={108} value="github_stack" />
-          <span className="label__checkbox"></span>
-          GitHub ({props.labels.cookies.label16}) -
-          <a className="label__link" href="https://tinyurl.com/yy3kzbdn" title="Cookie Policy - GitHub" tabIndex={308} target="new" rel="noopener">
-            {props.labels.cookies.label15}
-          </a>
-        </label>
-        <label className="form__label" htmlFor="add-to-any-cookie">
-          <input id="add-to-any-cookie" className="label__field" type="checkbox" name="add-to-any-cookie" tabIndex={109} value="add-to-any_stack" />
-          <span className="label__checkbox"></span>
-          AddToAny (Social Widget) -
-          <a className="label__link" href="https://tinyurl.com/v96mytk" title="Cookie Policy - AddToAny" tabIndex={309} target="new" rel="noopener">
-            {props.labels.cookies.label15}
-          </a>
-        </label>
-        <label className="form__label" htmlFor="disqus-cookie">
-          <input id="disqus-cookie" className="label__field" type="checkbox" name="disqus-cookie" tabIndex={110} value="disqus_stack" />
-          <span className="label__checkbox"></span>
-          Disqus ({props.labels.cookies.label17}) -
-          <a className="label__link" href="https://tinyurl.com/yx2gjbkh" title="Cookie Policy - Disqus" tabIndex={310} target="new" rel="noopener">
             {props.labels.cookies.label15}
           </a>
         </label>
