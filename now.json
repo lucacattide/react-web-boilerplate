@@ -18,9 +18,11 @@
   }],
   "build": {
     "env": {
+      "RECAPTCHA_SECRET_KEY": "@recaptcha",
       "EMAIL_SERVICE": "@email_service",
       "EMAIL_TEMPLATE_COOKIES": "@email_template_cookies",
-      "EMAIL_USER": "@email_user"
+      "EMAIL_USER": "@email_user",
+      "GTM_AUTH_PROD": "@gtm_auth_blog"
     }
   },
   "github": {

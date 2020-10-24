@@ -1,6 +1,8 @@
 # Repository - Configuration
+/coverage
 /node_modules
 /out
+/static/img/cms
 /.editorconfig
 /.next
 /.sass-cache
@@ -8,3 +10,4 @@
 .DS_Store
 .env
 .env.build
+.now

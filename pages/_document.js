@@ -46,9 +46,9 @@ export default class StackBlogDocument extends Document {
       origin: this.props.origin,
       url: this.props.url,
       absoluteUrl: this.props.origin + this.props.url,
-      title: 'LC <> Blog',
-      keywords: 'development job wellness personal growth',
-      description: 'IT development <> Job & wellness advices for personal growth'
+      title: '',
+      keywords: '',
+      description: ''
     };
 
     return metaTag;
@@ -62,7 +62,7 @@ export default class StackBlogDocument extends Document {
    * @memberof StackBlogDocument
    */
   render() {
-    const csp = `default-src 'none'; prefetch-src 'self' disqus.com c.disquscdn.com; script-src 'self' tagmanager.google.com router.infolinks.com resources.infolinks.com lc-blog.disqus.com static.addtoany.com www.google-analytics.com storage.googleapis.com code.jquery.com cdnjs.cloudflare.com www.google.com www.gstatic.com www.googletagmanager.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' c.disquscdn.com fonts.googleapis.com tagmanager.google.com cdnjs.cloudflare.com 'unsafe-inline'; connect-src 'self' tagmanager.google.com api.emailjs.com lc-blog.disqus.com static.addtoany.com storage.googleapis.com www.google.com www.googletagmanager.com www.google-analytics.com stats.g.doubleclick.net cdnjs.cloudflare.com code.jquery.com cloud.squidex.io localhost localhost:1337; font-src 'self' fonts.googleapis.com fonts.gstatic.com data:; img-src 'self' c.disquscdn.com referrer.disqus.com www.gstatic.com www.google-analytics.com stats.g.doubleclick.net ssl.gstatic.com i.creativecommons.org licensebuttons.net cloud.squidex.io data: localhost localhost:1337; media-src 'self'; frame-src 'self' router.infolinks.com disqus.com www.google.com; form-action 'self'; manifest-src 'self' ${cspHashOf(NextScript.getInlineScriptSource(this.props))}`;
+    const csp = `default-src 'none'; prefetch-src 'self'; script-src 'self' tagmanager.google.com router.infolinks.com resources.infolinks.com static.addtoany.com www.google-analytics.com storage.googleapis.com code.jquery.com cdnjs.cloudflare.com www.google.com www.gstatic.com www.googletagmanager.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' fonts.googleapis.com tagmanager.google.com cdnjs.cloudflare.com 'unsafe-inline'; connect-src 'self' tagmanager.google.com api.emailjs.com tatic.addtoany.com storage.googleapis.com www.google.com www.googletagmanager.com www.google-analytics.com stats.g.doubleclick.net cdnjs.cloudflare.com code.jquery.com localhost localhost:1337; font-src 'self' fonts.googleapis.com fonts.gstatic.com data:; img-src 'self' www.gstatic.com www.google-analytics.com stats.g.doubleclick.net ssl.gstatic.com i.creativecommons.org licensebuttons.net data: localhost localhost:1337; media-src 'self'; frame-src 'self' router.infolinks.com www.google.com; form-action 'self'; manifest-src 'self' ${cspHashOf(NextScript.getInlineScriptSource(this.props))}`;
     const metaTag = this.setMetaTags();
 
     return (

@@ -7,7 +7,7 @@ import emailjs from 'emailjs-com'
 // Cookies
 const Cookies = (props) => (
   useEffect(() => {
-    setCookies(props.labels, props.url, props.ip);
+    setCookies(props.labels, props.pageUrl, props.ip);
   }),
 
   // Cookies Start
@@ -16,7 +16,7 @@ const Cookies = (props) => (
     <div className="cookies__container cookies--notification opened">
       <h6>Notification</h6>
       <p className="container__body">
-        stack {props.labels.cookies.label1}.<br />
+        Name Blog {props.labels.cookies.label1}.<br />
         {props.labels.cookies.label2} <a className="body__link" href="privacy" title={props.labels.cookies.title1} tabIndex={100} target="new">{props.labels.cookies.link1} </a>
         {props.labels.cookies.label3}.
         <a className="body__close body__close--notification disable" href="#" title={props.labels.cookies.title2}
@@ -75,11 +75,29 @@ const Cookies = (props) => (
  */
 function ck(n, v) {
   const s = new Date();
+  let path = '';
+  let flag = '';
+
+  // Cookie check
+  if (n === 'cookie_law_stack') {
+    flag = 'SameSite=Lax;';
+  } else {
+    /**
+     * Google Check
+     * It disables secure flag on it due to Tag Manager incompatibility
+     */
+    if (n === 'google_stack') {
+      path = '; path=/; ';
+      flag = 'SaneSite=Lax';
+    } else {
+      path = '; path=/; ';
+      flag = 'SaneSite=None; secure';
+    }
+  }
 
   s.setDate(s.getDate() + 30);
-  // TODO: set secure flag in production
   document.cookie = n + '=' + escape(v) + '; expires=' + s.toGMTString() +
-    '; path=/;';
+  path + flag;
 }
 
 /**
@@ -156,7 +174,6 @@ function ak(n, labels) {
       case 'google_stack':
         $('#google-cookie').removeAttr('checked');
         $('.newsletter .container__form input').attr('disabled', 'disabled');
-        $('.banner').addClass('deactivate hidden');
         break;
 
       default:
@@ -180,7 +197,6 @@ function ak(n, labels) {
       case 'google_stack':
         $('#google-cookie').attr('checked', 'checked');
         $('.newsletter .container__form input').removeAttr('disabled');
-        $('.banner').removeClass('deactivate hidden');
         break;
 
       default:
@@ -207,7 +223,7 @@ function setCookies(labels, url, ip) {
   document.cookie = 'test_cookie';
 
   const t = (document.cookie.indexOf('test_cookie') != -1) ? true : false;
-  const n = ['cookie_law_stack', 'google_stack', 'linkedin_stack', 'github_stack', 'add-to-any_stack', 'disqus_stack'];
+  const n = ['cookie_law_stack', 'google_stack'];
   let locale = null;
   let HelperOptionsCookies = null;
 
@@ -245,8 +261,9 @@ function setCookies(labels, url, ip) {
             ck('cookie_law_stack', 'accepted');
 
             // Notify sending
+            locale = moment();
             HelperOptionsCookies = {
-              subject: 'Cookie Policy <> Accettazione',
+              subject: 'Cookie Policy',
               url: url,
               date: locale.format('DD/MM/YYYY'),
               hour: locale.format('HH:mm:ss'),
@@ -264,6 +281,8 @@ function setCookies(labels, url, ip) {
                   ak($(this).val(), labels);
                 }
               });
+
+          window.location.reload();
         });
     // Save
     $('.container__cta--save')
@@ -281,6 +300,8 @@ function setCookies(labels, url, ip) {
                   ak($(element).val(), labels);
                 }
               });
+
+          window.location.reload();
         });
     // Opt-Out
     $('.container__cta--opt-out')

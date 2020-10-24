@@ -11,6 +11,9 @@ const webpack = require('webpack');
 const nextConfig = {
   /* TODO: Enable for serverless deploy */
   target: 'serverless',
+  experimental: {
+    css: true
+  },
   // CSS
   cssLoaderOptions: {
     importLoaders: 1,
@@ -33,12 +36,12 @@ const nextConfig = {
   },
   // PWA
   // TODO: Comment if server is different from Now
-  transformManifest: manifest => [
+  /* transformManifest: manifest => [
     '/'
-  ].concat(manifest),
+  ].concat(manifest), */
   // TODO: Comment if server is different from Now
   // TODO: Enable in production
-  generateInDevMode: false,
+  //generateInDevMode: false,
   // Workbox
   workboxOpts: {
     // TODO: Comment if server is different from Now
@@ -46,7 +49,7 @@ const nextConfig = {
     navigationPreload: true,
     runtimeCaching: [{
       // CDN Resources
-      urlPattern: /.*(?:googleapis|creativecommons|licensebuttons|gstatic|jquery|cloudflare|googletagmanager|google|google-analytics|doubleclick)\.(?:com|io|org|net)/,
+      urlPattern: /.*(?:emailjs|addtoany|disqus|github|googleapis|creativecommons|licensebuttons|gstatic|jquery|cloudflare|googletagmanager|google|google-analytics|doubleclick)\.(?:com|io|org|net)/,
       handler: 'StaleWhileRevalidate',
       options: {
         cacheName: 'resources',
@@ -181,26 +184,15 @@ const nextConfig = {
   },
   // Environment
   env: {
+    RECAPTCHA_SECRET_KEY: process.env.RECAPTCHA_SECRET_KEY,
     EMAIL_SERVICE: process.env.EMAIL_SERVICE,
     EMAIL_TEMPLATE_COOKIES: process.env.EMAIL_TEMPLATE_COOKIES,
-    EMAIL_USER: process.env.EMAIL_USER
-  },
-  // File export
-  exportPathMap: async function(defaultPathMap, {
-    dev,
-  }) {
-    const sitemap = {
-      '/': {
-        page: '/'
-      }
-    }
-
-    if (dev) {
-      return defaultPathMap
-    } else {
-      return sitemap
-    }
-  },
+    EMAIL_USER: process.env.EMAIL_USER,
+    GTM_AUTH_PROD: process.env.GTM_AUTH_PROD
+  }
 };
+const conf = withSass(withCSS(withImages(withOffline(nextConfig))));
 
-module.exports = withSass(withCSS(withImages(withOffline(nextConfig))));
+delete conf.exportPathMap
+
+module.exports = conf;

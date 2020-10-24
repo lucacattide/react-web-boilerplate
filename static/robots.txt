@@ -9,7 +9,7 @@ Disallow: /node_modules
 Disallow: /out
 Disallow: /pages
 Disallow: /sass
-Disallow: /public
+Disallow: /static
 Disallow: /__tests__
 Disallow: /.*
 Disallow: /*.js
