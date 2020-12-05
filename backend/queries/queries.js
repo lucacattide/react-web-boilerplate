@@ -3,13 +3,11 @@
 import gql from 'graphql-tag';
 
 // Queries
-const _QUERY = {};
+const ENTITY_QUERY = {};
 
-//
-_QUERY.articles = {
-
-}
+// ENTITY
+ENTITY_QUERY.entities = {};
 
 // Module export
-export default _QUERY;
+export default ENTITY_QUERY;
 // Module end

@@ -1,0 +1,4 @@
+User-agent: *
+Sitemap: https://
+Allow: /_next
+Disallow: 404

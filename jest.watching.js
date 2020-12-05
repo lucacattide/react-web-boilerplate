@@ -42,7 +42,7 @@ class TestWatchPlugin {
     // Edit the user menu
     return {
       key: 'd',
-      prompt: 'Data fetching test',
+      prompt: 'test',
     };
   }
 

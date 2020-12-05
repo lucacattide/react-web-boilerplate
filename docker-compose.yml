@@ -1,13 +1,13 @@
 version: '3.7'
 services:
-  stack:
-    container_name: stack
+  app:
+    container_name: app
     build:
       context: .
       dockerfile: Dockerfile
       labels:
-        dev.stack.title: ""
-        dev.stack.description: ""
+        dev.app.title: ""
+        dev.app.description: ""
     volumes:
       - '.:/usr/src/app'
       - '/usr/src/app/node_modules'
@@ -18,5 +18,5 @@ services:
       - NODE_ENV=development
       - CHOKIDAR_USEPOLLING=true
     labels:
-      dev.stack.title: ""
-      dev.stack.description: ""
+      dev.app.title: ""
+      dev.app.description: ""

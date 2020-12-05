@@ -2,26 +2,13 @@
 // Apollo Client
 // JS imports
 import {
-  ApolloClient
-} from 'apollo-client';
-import {
-  InMemoryCache
-} from 'apollo-cache-inmemory';
-import {
-  HttpLink
-} from 'apollo-link-http';
-import {
-  onError
-} from 'apollo-link-error';
-import {
-  ApolloLink
-} from 'apollo-link';
-import fetch from 'isomorphic-unfetch';
-import {
-  apiAuthorizationUrl,
-  apiBaseUrl,
-  apiOptions
-} from '../js/utils';
+  ApolloClient,
+  InMemoryCache,
+  HttpLink,
+  ApolloLink,
+} from '@apollo/client';
+import { onError } from 'apollo-link-error';
+import { apiAuthorizationUrl, apiBaseUrl, apiOptions } from '../src/utils.ts';
 
 let apolloClient = null;
 
@@ -40,11 +27,11 @@ function create(initialState) {
       headers: {
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: apiOptions
+      body: apiOptions,
     });
     const json = await response.json();
 
-    if (typeof(Storage) !== 'undefined') {
+    if (typeof Storage !== 'undefined') {
       if (!sessionStorage.getItem('access_token')) {
         sessionStorage.setItem('access_token', json.access_token);
       }
@@ -59,7 +46,7 @@ function create(initialState) {
     uri: `${apiBaseUrl}/graphql`,
     // Additional fetch() options like `credentials` or `headers`
     credentials: 'same-origin',
-    fetch: customFetch
+    fetch: customFetch,
   });
 
   // Check out https://github.com/zeit/next.js/pull/4611 if you want to use the AWSAppSyncClient
@@ -68,23 +55,16 @@ function create(initialState) {
     // Disables forceFetch on the server (so queries are only run once)
     ssrMode: !isBrowser,
     link: ApolloLink.from([
-      onError(({
-        graphQLErrors,
-        networkError
-      }) => {
+      onError(({ graphQLErrors, networkError }) => {
         if (graphQLErrors)
-          graphQLErrors.forEach(({
-              message,
-              locations,
-              path
-            }) =>
+          graphQLErrors.forEach(({ message, locations, path }) =>
             console.log(
               `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
             ),
           );
         if (networkError) console.log(`[Network error]: ${networkError}`);
       }),
-      httpLink
+      httpLink,
     ]),
     cache: new InMemoryCache().restore(initialState || {}),
   });
@@ -99,12 +79,10 @@ function create(initialState) {
  * @return {object}
  */
 export default function initApollo(initialState) {
-  // Make sure to create a new client for every server-side request so that data
-  // isn't shared between connections (which would be bad)
+  // Make sure to create a new client for every server-side request so that data isn't shared between connections (which would be bad)
   if (typeof window === 'undefined') {
     return create(initialState);
   }
-
   // Reuse client on the client-side
   if (!apolloClient) {
     apolloClient = create(initialState);
