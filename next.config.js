@@ -1,5 +1,6 @@
 // Module Start
 // JS imports
+const path = require('path');
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 
@@ -18,7 +19,7 @@ const nextConfig = {
     dest: 'public',
     sw: 'service-worker.js',
     // TODO: Decomment in production
-    // disable: process.env.NODE_ENV === 'development',
+    disable: process.env.NODE_ENV === 'development',
     register: false,
     skipWaiting: false,
     navigationPreload: true,
