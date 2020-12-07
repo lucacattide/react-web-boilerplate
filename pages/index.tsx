@@ -1,6 +1,6 @@
 // Module Start
 // CSS imports
-import styles from '../styles/Index.module.css';
+import styles from '../styles/Index/Index.module.scss';
 // JS imports
 import { NextPage } from 'next';
 import Head from 'next/head';

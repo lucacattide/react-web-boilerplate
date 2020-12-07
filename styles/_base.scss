@@ -1,0 +1,33 @@
+// SASS Start
+// Variables
+$white: #fff;
+
+// General
+// SEO
+mark {
+  background-color: transparent !important;
+  color: inherit;
+  padding: 0 !important;
+}
+
+// Template
+body::-webkit-scrollbar,
+body::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track-piece,
+body::-webkit-scrollbar-corner,
+body::-webkit-resizer,
+.scrollbar::-webkit-scrollbar,
+.scrollbar::-webkit-scrollbar-track,
+.scrollbar::-webkit-scrollbar-track-piece,
+.scrollbar::-webkit-scrollbar-corner,
+.scrollbar::-webkit-resizer {
+  background-color: $white;
+}
+
+body::-webkit-scrollbar-button,
+body::-webkit-scrollbar-thumb,
+.scrollbar::-webkit-scrollbar-button,
+.scrollbar::-webkit-scrollbar-thumb {
+  background-color: $white;
+}
+// SASS End

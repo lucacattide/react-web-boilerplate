@@ -1,6 +1,6 @@
 // Module Start
 // CSS imports
-import '../styles/globals.css';
+import '../styles/global.scss';
 // JS imports
 import { useEffect } from 'react';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
