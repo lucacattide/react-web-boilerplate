@@ -20,8 +20,8 @@
     "**/*.tsx",
     "backend/with-apollo-client.js",
     "backend/init-apollo.js",
-    "backend/queries/fragments/fragments.js",
-    "backend/queries/queries.js",
+    "backend/queries/fragments/pages.js",
+    "backend/queries/pages.js",
     "src/refresh.js",
     "src/install.js"
   ],

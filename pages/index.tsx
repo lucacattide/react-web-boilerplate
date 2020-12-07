@@ -5,24 +5,24 @@ import styles from '../styles/Index/Index.module.scss';
 import { NextPage } from 'next';
 import Head from 'next/head';
 import { useQuery } from '@apollo/client';
-import ENTITY_QUERY from '../backend/queries/queries';
+import PAGE_QUERY from '../backend/queries/pages';
 import CustomError from '../components/CustomError';
 
 // Interfaces
-interface Entity {
+interface Page {
   property: unknown;
 }
-interface EntityData {
-  entity: Entity[];
+interface PageData {
+  entity: Page[];
 }
-interface EntityVars {
+interface PageVars {
   var: unknown;
 }
 
 // Index
 const Index: NextPage = () => {
-  const { loading, error, data } = useQuery<EntityData, EntityVars>(
-    ENTITY_QUERY.entities.something,
+  const { loading, error, data } = useQuery<PageData, PageVars>(
+    PAGE_QUERY.pages.home,
     { variables: { var: 'foo' } },
   );
 
@@ -35,7 +35,7 @@ const Index: NextPage = () => {
     return null;
   }
 
-  const contents = data.something;
+  const contents = data?.something;
 
   return (
     <>
