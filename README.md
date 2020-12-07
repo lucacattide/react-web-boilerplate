@@ -26,9 +26,35 @@ yarn dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Stack
+### Using Docker
 
-#### Languages
+You may use Docker to run both the `development` environment than the `production` one too.
+
+#### Development
+
+Build the `development` image and run the container:
+
+```
+docker-compose up -d --build
+```
+
+#### Production
+
+Build the `production` image and run the container:
+
+```
+docker-compose -f docker-compose.prod.yml up -d --build
+```
+
+Remember to stop previous containers before switching from one to another, in order to avoid any issue:
+
+```
+docker-compose stop
+```
+
+## Stack
+
+### Languages
 
 - [HTML](https://html.spec.whatwg.org)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
@@ -37,27 +63,27 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 - [TypeScript](https://www.typescriptlang.org/)
 - [GraphQL](https://graphql.org/)
 
-#### Libraries
+### Libraries
 
 - [Workbox](https://developers.google.com/web/tools/workbox/)
 - [Apollo Client](https://www.apollographql.com/)
 
-#### Frameworks
+### Frameworks
 
 - [Tailwind](https://tailwindcss.com/)
 - [Jest](https://jestjs.io/)
 
-#### Linters/Plugins
+### Linters/Plugins
 
 - [stylelint](https://stylelint.io/)
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 
-#### Compilers
+### Compilers
 
 - [Babel](https://babeljs.io/)
 
-#### Platforms
+### Platforms
 
 - [Docker](https://www.docker.com/)
 - [Vercel](https://vercel.com/)
