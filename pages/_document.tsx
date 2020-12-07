@@ -2,6 +2,7 @@
 // JS imports
 import Document, {
   DocumentContext,
+  Html,
   Head,
   Main,
   NextScript,
@@ -96,7 +97,7 @@ class MyDocument extends Document<MyDocumentProps> {
     const metaTag = this.setMetaTags();
 
     return (
-      <html lang="en-GB" prefix="og: http://ogp.me/ns#">
+      <Html lang="en-GB" prefix="og: http://ogp.me/ns#">
         {/* Head Start */}
         <Head>
           {/* Meta Tags Start */}
@@ -251,7 +252,7 @@ class MyDocument extends Document<MyDocumentProps> {
           {/* Rich Snippets End */}
         </body>
         {/* Body End */}
-      </html>
+      </Html>
     );
   }
 }
