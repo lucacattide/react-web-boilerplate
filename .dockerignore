@@ -1,5 +1,8 @@
 node_modules
 out
+.dockerignore
 .editorconfig
 .vscode
 .DS_Store
+Dockerfile
+Dockerfile.prod

@@ -1,7 +1,7 @@
 version: '3.7'
 services:
-  app:
-    container_name: app
+  app-prod:
+    container_name: app-prod
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,10 +13,9 @@ services:
       - '/usr/src/app/node_modules'
       - '/usr/src/app/.next'
     ports:
-      - '3001:3000'
+      - '1337:80'
     environment:
-      - NODE_ENV=development
-      - CHOKIDAR_USEPOLLING=true
+      - NODE_ENV=production
     labels:
       dev.app.title: ''
       dev.app.description: ''
