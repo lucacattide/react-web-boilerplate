@@ -2,6 +2,7 @@
 // Error
 // JS imports
 import { NextPage } from 'next';
+import CustomError from '../components/CustomError';
 
 type ErrorType = {
   title: string;
@@ -21,22 +22,7 @@ interface Props {
 
 // Error - Override
 const Error: NextPage<Props> = ({ error }) => {
-  return (
-    // TODO: Tailwind refactoring
-    // Error Start
-    <section className={`error ${error.background}`}>
-      <h6>Error</h6>
-      <div className="error__container">
-        {/* Summary Start */}
-        <article className="container__article">
-          <h1 className="article__title">{error.title}</h1>
-          <p className="article__body">{error.message}</p>
-        </article>
-        {/* Summary End */}
-      </div>
-    </section>
-    // Error End
-  );
+  return <CustomError error={error} />;
 };
 
 // Properties initialization

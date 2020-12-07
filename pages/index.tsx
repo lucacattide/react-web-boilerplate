@@ -6,7 +6,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import { useQuery } from '@apollo/client';
 import ENTITY_QUERY from '../backend/queries/queries';
-import ErrorDb from '../components/ErrorDb';
+import CustomError from '../components/CustomError';
 
 // Interfaces
 interface Entity {
@@ -28,7 +28,7 @@ const Index: NextPage = () => {
 
   // Exception check
   if (error) {
-    return <ErrorDb error={error.message} />;
+    return <CustomError error={error} />;
   }
   // DB fetching check
   if (loading) {
