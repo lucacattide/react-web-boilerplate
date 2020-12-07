@@ -2,7 +2,7 @@
 
 ## Styles & Coding
 
-- HTML, CSS follow in general the [Google Style Guide](https://github.com/google/styleguide) conventions;
+- HTML & CSS follow in general the [Google Style Guide](https://github.com/google/styleguide) conventions;
 - JavaScript follows the [AirBnB Style Guide](https://github.com/airbnb/javascript) conventions;
 - Custom CSS follows the [BEM](http://getbem.com/) convention;
 

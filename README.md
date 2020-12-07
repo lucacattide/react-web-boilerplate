@@ -2,7 +2,6 @@
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/lucacattide/next-boilerplate.svg?style=for-the-badge)
 [![GitHub contributors](https://img.shields.io/badge/Contributors-1-lightgrey.svg?style=for-the-badge)](https://github.com/lucacattide/next-boilerplate/graphs/contributors)
-![GitHub commit activity](https://img.shields.io/github/commit-activity/y/lucacattide/next-boilerplate.svg?style=for-the-badge)
 ![GitHub License](https://img.shields.io/github/license/lucacattide/next-boilerplate.svg?style=for-the-badge)
 
 ## Team
@@ -26,6 +25,43 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+### Stack
+
+#### Languages
+
+- [HTML](https://html.spec.whatwg.org)
+- [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
+- [SASS](https://sass-lang.com/)
+- [JavaScript](https://www.javascript.com/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [GraphQL](https://graphql.org/)
+
+#### Libraries
+
+- [Workbox](https://developers.google.com/web/tools/workbox/)
+- [Apollo Client](https://www.apollographql.com/)
+
+#### Frameworks
+
+- [Compass](http://compass-style.org/)
+- [Tailwind](https://tailwindcss.com/)
+- [Jest](https://jestjs.io/)
+
+#### Linters/Plugins
+
+- [stylelint](https://stylelint.io/)
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+
+#### Compilers
+
+- [Babel](https://babeljs.io/)
+
+#### Platforms
+
+- [Docker](https://www.docker.com/)
+- [Vercel](https://vercel.com/)
 
 ## Testing
 
