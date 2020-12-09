@@ -1,26 +1,11 @@
 // Module Start
 // JS imports
 import React, { FC } from 'react';
-
-// Error
-type ErrorType = {
-  title?: string;
-  message: string;
-};
-
-/**
- * @description Page properties
- * @author Luca Cattide
- * @date 2020-12-04
- * @interface Props
- */
-interface Props {
-  error: ErrorType;
-}
+import { CommonProps, ErrorType } from '../typings/props';
 
 // Error - Override
-const CustomError: FC<Props> = ({ error }) => {
-  const { title, message } = error;
+const CustomError: FC<CommonProps> = ({ error }) => {
+  const { title, message }: ErrorType = error!;
 
   return (
     // TODO: Tailwind refactoring
