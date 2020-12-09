@@ -1,9 +1,27 @@
 // SASS Start
 // Variables
+// Colors
 $white: #fff;
+// Fonts
+// Dimensions
+$font-size-desktop: 14px;
+$font-size-mobile: 12px;
+$font-size-rem: 62.5%;
+// Resolutions
+$desktop: 1024px;
+$desktop-hd: 1280px;
+$desktop-uhd: 1536px;
+$smartphone: 640px;
+$tablet: 768px;
+// Media Queries
+$media-desktop: 'min-width: #{$desktop}';
+$media-desktop-hd: 'min-width: #{$desktop-hd}';
+$media-desktop-uhd: 'min-width: #{$desktop-uhd}';
+$media-tablet: 'min-width: #{$tablet}';
+$media-smartphone: 'min-width: #{$smartphone}';
 
 // General
-// SEO
+// SEO - Reset
 mark {
   background-color: transparent !important;
   color: inherit;
@@ -11,6 +29,7 @@ mark {
 }
 
 // Template
+// Scrollbars
 body::-webkit-scrollbar,
 body::-webkit-scrollbar-track,
 body::-webkit-scrollbar-track-piece,
@@ -29,5 +48,25 @@ body::-webkit-scrollbar-thumb,
 .scrollbar::-webkit-scrollbar-button,
 .scrollbar::-webkit-scrollbar-thumb {
   background-color: $white;
+}
+
+// HTML
+html {
+  // Responsive fonts
+  font-size: $font-size-rem;
+
+  // Body
+  body {
+    font-size: $font-size-mobile;
+
+    @media ($media-smartphone) {
+      font-size: $font-size-desktop;
+    }
+  }
+
+  // Used as Image Replacement
+  h6 {
+    display: none;
+  }
 }
 // SASS End
