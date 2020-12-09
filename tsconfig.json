@@ -22,8 +22,7 @@
     "backend/init-apollo.js",
     "backend/queries/fragments/pages.js",
     "backend/queries/pages.js",
-    "src/refresh.js",
-    "src/install.js"
+    "src/refresh.js"
   ],
   "exclude": ["node_modules"]
 }
