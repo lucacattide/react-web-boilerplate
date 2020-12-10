@@ -17,7 +17,7 @@ const nextConfig = {
   pwa: {
     dest: 'public',
     // TODO: Decomment in production
-    // disable: process.env.NODE_ENV === 'development',
+    disable: process.env.NODE_ENV === 'development',
   },
 };
 
