@@ -7,7 +7,6 @@ import Head from 'next/head';
 import { useQuery } from '@apollo/client';
 import PAGE_QUERY from '../backend/queries/pages';
 import CustomError from '../components/CustomError';
-import Layout from '../components/Layout';
 
 // Interfaces
 interface Page {
@@ -46,10 +45,8 @@ const Index: NextPage = () => {
         <link rel="canonical" href="https://" />
       </Head>
       {/* Head End */}
-      <Layout>
-        {/* TODO: Tailwind refactoring */}
-        <div className={styles.div}></div>
-      </Layout>
+      {/* TODO: Tailwind refactoring */}
+      <div className={styles.div}></div>
     </>
     /* Index End */
   );

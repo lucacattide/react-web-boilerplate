@@ -8,6 +8,7 @@ import Head from 'next/head';
 import withApolloClient from '../backend/with-apollo-client';
 import { ApolloProvider, ApolloClient } from '@apollo/client';
 import TagManager from 'react-gtm-module';
+import Layout from '../components/Layout';
 
 // Types
 type TagManagerOptions = {
@@ -47,7 +48,9 @@ function MyApp({ Component, pageProps, apolloClient }: MyAppProps) {
           />
           <title></title>
         </Head>
-        <Component {...pageProps} />
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
       </ApolloProvider>
     </>
   );
