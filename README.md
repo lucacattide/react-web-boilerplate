@@ -98,10 +98,13 @@ kubectl delete service,deployment my-app
 
 - [HTML](https://html.spec.whatwg.org)
 - [CSS](https://www.w3.org/Style/CSS/Overview.en.html)
-- [SASS](https://sass-lang.com/)
 - [JavaScript](https://www.javascript.com/)
 - [TypeScript](https://www.typescriptlang.org/)
 - [GraphQL](https://graphql.org/)
+
+### Post-Processors
+
+- [PostCSS](https://postcss.org/)
 
 ### Libraries
 
@@ -126,6 +129,7 @@ kubectl delete service,deployment my-app
 ### Platforms
 
 - [Docker](https://www.docker.com/)
+- [Kubernetes](https://kubernetes.io/)
 - [Vercel](https://vercel.com/)
 
 ## Testing
