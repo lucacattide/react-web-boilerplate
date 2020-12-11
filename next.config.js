@@ -16,11 +16,12 @@ const nextConfig = {
   // PWA
   pwa: {
     dest: 'public',
-    // disable: process.env.NODE_ENV === 'development',
+    disable: process.env.NODE_ENV === 'development',
+    mode: process.env.NODE_ENV === 'production' ? 'production' : 'development',
     register: false,
     skipWaiting: false,
     navigationPreload: true,
-    offlineGoogleAnalytics: false,
+    offlineGoogleAnalytics: true,
     cleanupOutdatedCaches: true,
     runtimeCaching: [
       ...runtimeCaching,
