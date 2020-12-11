@@ -104,7 +104,6 @@ class MyDocument extends Document<MyDocumentProps> {
           <meta charSet="UTF-8" />
           <meta httpEquiv="X-UA-Compatible" content="IE=edge,chrome=1" />
           <meta httpEquiv="Content-Security-Policy" content={csp} />
-
           <meta name="keywords" content={metaTag.keywords} />
           <meta name="description" content={metaTag.description} />
           <meta
@@ -126,12 +125,16 @@ class MyDocument extends Document<MyDocumentProps> {
             content={this.props.origin + '/img/'}
           />
           <meta name="og:locale" property="og:locale" content="en-GB" />
+          <meta name="application-name" content={metaTag.title} />
+          <meta name="mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta
             name="apple-mobile-web-app-status-bar-style"
             content="default"
           />
           <meta name="apple-mobile-web-app-title" content={metaTag.title} />
+          <meta name="msapplication-TileColor" content="#" />
+          <meta name="msapplication-tap-highlight" content="no" />
           <meta name="theme-color" content="#" />
           {/* Meta Tags End */}
           {/* Preload Start */}
@@ -170,13 +173,27 @@ class MyDocument extends Document<MyDocumentProps> {
             crossOrigin="anonymous"
           />
           {/* CSS Imports End */}
+          {/* Prefetching Start */}
           <link
             rel="icon dns-prefetch"
             type="image/png"
             href="/img/favicon.png"
           />
+          <link
+            rel="icon dns-prefetch"
+            type="image/png"
+            sizes="32x32"
+            href="/img/favicon-32x32.png"
+          />
+          <link
+            rel="icon dns-prefetch"
+            type="image/png"
+            sizes="16x16"
+            href="/img/favicon-16x16.png"
+          />
           <link rel="apple-touch-icon dns-prefetch" href="/img/" />
           <link rel="manifest dns-prefetch" href="/manifest.json" />
+          {/* Prefetching End */}
           {/* JS Imports Start */}
           {/* Google Tag Manager Start */}
           {/* TODO: Add ID */}
