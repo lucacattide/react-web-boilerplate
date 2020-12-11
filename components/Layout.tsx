@@ -4,7 +4,7 @@ import React, { FC, useEffect } from 'react';
 import { CommonProps } from '../typings/props';
 import PropTypes from 'prop-types';
 import Header from './Header';
-import refresh from '../src/refresh';
+import { refresh } from '../src/utils';
 
 // Layout
 const Layout: FC<CommonProps> = ({ children }) => {

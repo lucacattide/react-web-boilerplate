@@ -14,15 +14,6 @@
     "isolatedModules": true,
     "jsx": "preserve"
   },
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "backend/with-apollo-client.js",
-    "backend/init-apollo.js",
-    "backend/queries/fragments/pages.js",
-    "backend/queries/pages.js",
-    "src/refresh.js"
-  ],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "backend/**/*.js"],
   "exclude": ["node_modules"]
 }

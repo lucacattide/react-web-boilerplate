@@ -16,8 +16,26 @@ const nextConfig = {
   // PWA
   pwa: {
     dest: 'public',
-    // TODO: Decomment in production
-    disable: process.env.NODE_ENV === 'development',
+    // disable: process.env.NODE_ENV === 'development',
+    register: false,
+    skipWaiting: false,
+    navigationPreload: true,
+    offlineGoogleAnalytics: false,
+    cleanupOutdatedCaches: true,
+    runtimeCaching: [
+      ...runtimeCaching,
+      {
+        // CDN Resources
+        urlPattern: /.*(?:googleapis|creativecommons|licensebuttons|gstatic|googletagmanager|google|google-analytics|doubleclick)\.(?:com|io|org|net)/,
+        handler: 'StaleWhileRevalidate',
+        options: {
+          cacheName: 'resources',
+          cacheableResponse: {
+            statuses: [0, 200],
+          },
+        },
+      },
+    ],
   },
 };
 

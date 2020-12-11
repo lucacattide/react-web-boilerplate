@@ -1,5 +1,9 @@
 // Global
 // Window
+declare interface Window {
+  workbox: Workbox;
+}
+
 declare interface WindowEventMap {
   beforeinstallprompt: BeforeInstallPromptEvent;
 }
