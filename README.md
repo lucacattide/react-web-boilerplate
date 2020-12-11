@@ -28,7 +28,7 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ### Using Docker
 
-You may use Docker to run both the `development` environment than the `production` one too.
+You may use [Docker](https://www.docker.com/) to run both the `development` environment than the `production` one too.
 
 #### Development
 
@@ -51,6 +51,46 @@ Remember to stop previous containers before switching from one to another, in or
 ```
 docker-compose stop
 ```
+
+### Using Kubernetes
+
+You may use [Kubernetes](https://kubernetes.io/) to orchestrate the `production` container.
+
+#### Cluster Connection
+
+Connect to your local cluster\*:
+
+```
+kubectl config use-context docker-desktop
+```
+
+#### Container image registry upload
+
+Create a local Docker registry\*:
+
+```
+docker tag my-app localhost:5000/my-app
+```
+
+Push the image to the registry\*:
+
+```
+docker push localhost:5000/my-app
+```
+
+Deploy app\*:
+
+```
+kubectl apply -f deployment.yaml
+```
+
+Remove app:
+
+```
+kubectl delete service,deployment my-app
+```
+
+##### <sup>\*</sup> Otherwise use your Cloud service reference.
 
 ## Stack
 
