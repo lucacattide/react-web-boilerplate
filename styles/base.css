@@ -1,0 +1,59 @@
+/* CSS Start */
+/* Base */
+@layer base {
+  :root {
+    /* Variables */
+    /* Dimensions */
+    --font-size-desktop: 14px;
+    --font-size-mobile: 12px;
+    --font-size-rem: 62.5%;
+  }
+
+  /* General */
+  /* Template */
+  /* Scrollbars */
+  body::-webkit-scrollbar,
+  body::-webkit-scrollbar-track,
+  body::-webkit-scrollbar-track-piece,
+  body::-webkit-scrollbar-corner,
+  body::-webkit-resizer {
+    @apply bg-white;
+  }
+
+  body::-webkit-scrollbar-button,
+  body::-webkit-scrollbar-thumb {
+    @apply bg-black;
+  }
+
+  /* Titles */
+  /* Used as placeholder and in image replacement */
+  h6 {
+    @apply hidden;
+  }
+
+  /* HTML */
+  html {
+    font-size: var(--font-size-rem);
+
+    /* Body */
+    body {
+      font-size: var(--font-size-mobile);
+
+      .container-main {
+        grid-template-rows: auto 1fr auto;
+      }
+
+      @screen sm {
+        font-size: var(--font-size-desktop);
+      }
+    }
+  }
+
+  /* SEO */
+  /* Reset */
+  mark {
+    @apply bg-transparent p-0 !important;
+    @apply text-current;
+  }
+}
+/* CSS End */

@@ -213,7 +213,7 @@ class MyDocument extends Document<MyDocumentProps> {
         </Head>
         {/* Head End */}
         {/* Body Start */}
-        <body>
+        <body className="h-full">
           {/* Google Tag Manager Start */}
           <noscript>
             <iframe

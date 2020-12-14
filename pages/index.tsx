@@ -1,6 +1,6 @@
 // Module Start
 // CSS imports
-import styles from '../styles/Index/Index.module.scss';
+import styles from '../styles/Index/Index.module.css';
 // JS imports
 import { NextPage } from 'next';
 import Head from 'next/head';
@@ -46,7 +46,9 @@ const Index: NextPage = () => {
       </Head>
       {/* Head End */}
       {/* TODO: Tailwind refactoring */}
-      <div className={styles.div}></div>
+      <section className={styles.home}>
+        <h6>Home</h6>
+      </section>
     </>
     /* Index End */
   );
