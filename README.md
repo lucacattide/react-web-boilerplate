@@ -108,12 +108,14 @@ kubectl delete service,deployment my-app
 
 ### Libraries
 
+- [React](https://reactjs.org/)
 - [Workbox](https://developers.google.com/web/tools/workbox/)
 - [Apollo Client](https://www.apollographql.com/)
 
 ### Frameworks
 
 - [Tailwind](https://tailwindcss.com/)
+- [NextJS](https://nextjs.org/)
 - [Jest](https://jestjs.io/)
 
 ### Linters/Plugins
