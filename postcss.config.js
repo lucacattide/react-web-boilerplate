@@ -1,3 +1,6 @@
+// Module Start
+// PostCSS - Configuration
+// Module export
 module.exports = {
   plugins: {
     'postcss-import': {},
@@ -11,3 +14,4 @@ module.exports = {
     autoprefixer: {},
   },
 };
+// Module End

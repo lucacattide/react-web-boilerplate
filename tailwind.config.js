@@ -1,5 +1,9 @@
+// Module Start
+// Tailwind - Configuration
+// JS imports
 const preset = require('./tailwind-preset.js');
 
+// Module export
 module.exports = {
   // Production build optimization
   purge: ['./pages/**/*.js', './components/**/*.js'],
@@ -15,3 +19,4 @@ module.exports = {
   },
   plugins: [],
 };
+// Module End
