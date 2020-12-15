@@ -1,7 +1,14 @@
 {
-  "presets": [
-    "next/babel",
-    ["@babel/preset-env", { "targets": { "node": "current" } }],
-    "@babel/preset-typescript"
-  ]
+  "env": {
+    "development": {
+      "presets": [
+        "next/babel",
+        ["@babel/preset-env", { "targets": { "node": "current" } }],
+        "@babel/preset-typescript"
+      ]
+    },
+    "test": {
+      "presets": ["next/babel", "@babel/preset-typescript"]
+    }
+  }
 }

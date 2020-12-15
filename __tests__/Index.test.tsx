@@ -1,7 +1,7 @@
 // Module Start
 // JS Imports
 import React from 'react';
-import { mount } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Index from '../pages/index';
 
@@ -9,7 +9,7 @@ const index = <Index />;
 
 // Index Unit Testing
 describe('Index unit test', () => {
-  test('It renders the Index page without crashing', () => {
+  test('It renders the Home page', () => {
     const wrapper = mount(index);
 
     expect(wrapper.find(Index)).toHaveLength(1);
@@ -17,8 +17,8 @@ describe('Index unit test', () => {
 });
 // Snapshot testing
 describe('App snapshot test', () => {
-  test('It renders the root App without crashing', () => {
-    const wrapper = mount(index);
+  test('It matches snapshot', () => {
+    const wrapper = shallow(index);
 
     expect(toJson(wrapper)).toMatchInlineSnapshot();
   });

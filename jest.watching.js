@@ -15,17 +15,15 @@ class TestWatchPlugin {
    */
   apply(jestHooks) {
     // Defines if a test must be executed or not
-    /* jestHooks.shouldRunTestSuite((testPath) => {
-      return Promise.resolve(testPath.includes('fetch'));
-    }); */
+    jestHooks.shouldRunTestSuite((testPath) => {
+      return Promise.resolve(testPath.includes('something'));
+    });
     // On test complete pass the result
     jestHooks.onTestRunComplete((results) => {
       this._hasSnapshotFailure = results.snapshot.failure;
     });
     // On every Filesystem change
-    jestHooks.onFileChange(({
-      projects,
-    }) => {
+    jestHooks.onFileChange(({ projects }) => {
       this._projects = projects;
     });
   }
