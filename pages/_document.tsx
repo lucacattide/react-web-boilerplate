@@ -194,37 +194,10 @@ class MyDocument extends Document<MyDocumentProps> {
           <link rel="apple-touch-icon dns-prefetch" href="/img/" />
           <link rel="manifest dns-prefetch" href="/manifest.json" />
           {/* Prefetching End */}
-          {/* JS Imports Start */}
-          {/* Google Tag Manager Start */}
-          {/* TODO: Add ID */}
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-            })(window,document,'script','dataLayer','');
-          `,
-            }}
-          />
-          {/* Google Tag Manager End */}
-          {/* JS Imports End */}
         </Head>
         {/* Head End */}
         {/* Body Start */}
         <body className="h-full">
-          {/* Google Tag Manager Start */}
-          <noscript>
-            <iframe
-              /* TODO: Add ID */
-              src="https://www.googletagmanager.com/ns.html?id="
-              height="0"
-              width="0"
-              style={{ display: 'none', visibility: 'hidden' }}
-            ></iframe>
-          </noscript>
-          {/* Google Tag Manager End */}
           {/* Container Start */}
           <Main />
           {/* Container End */}
