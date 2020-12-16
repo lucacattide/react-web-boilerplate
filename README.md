@@ -90,7 +90,7 @@ Remove app:
 kubectl delete service,deployment my-app
 ```
 
-##### <sup>\*</sup> Otherwise use your Cloud service reference.
+##### <sup>\*</sup> Otherwise use your Cloud service reference
 
 ## Stack
 
@@ -164,7 +164,7 @@ You may alternatively use the following automated deploy button:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/git/external?repository-url=)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
 
 ## FAQ
 
