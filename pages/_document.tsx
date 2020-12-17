@@ -91,7 +91,7 @@ class MyDocument extends Document<MyDocumentProps> {
    * @memberof MyDocument
    */
   render() {
-    const csp = `default-src 'none'; prefetch-src 'self'; script-src 'self' tagmanager.google.com router.infolinks.com resources.infolinks.com www.google-analytics.com storage.googleapis.com www.google.com www.gstatic.com www.googletagmanager.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' fonts.googleapis.com tagmanager.google.com 'unsafe-inline'; connect-src 'self' tagmanager.google.com storage.googleapis.com www.google.com www.googletagmanager.com www.google-analytics.com stats.g.doubleclick.net localhost; font-src 'self' fonts.googleapis.com fonts.gstatic.com data:; img-src 'self' www.gstatic.com www.google-analytics.com stats.g.doubleclick.net ssl.gstatic.com i.creativecommons.org licensebuttons.net data: localhost; manifest-src 'self' ${this.setCspHashOf(
+    const csp = `default-src 'none'; prefetch-src 'self'; script-src 'self' tagmanager.google.com www.google-analytics.com storage.googleapis.com www.google.com www.gstatic.com www.googletagmanager.com 'unsafe-eval' 'unsafe-inline'; style-src 'self' fonts.googleapis.com tagmanager.google.com 'unsafe-inline'; connect-src 'self' tagmanager.google.com storage.googleapis.com www.google.com www.googletagmanager.com www.google-analytics.com stats.g.doubleclick.net localhost; font-src 'self' fonts.googleapis.com fonts.gstatic.com data:; img-src 'self' www.gstatic.com www.google-analytics.com stats.g.doubleclick.net ssl.gstatic.com i.creativecommons.org licensebuttons.net data: localhost; manifest-src 'self' ${this.setCspHashOf(
       NextScript.getInlineScriptSource(this.props),
     )}`;
     const metaTag = this.setMetaTags();
