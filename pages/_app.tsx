@@ -65,7 +65,7 @@ function MyApp({ Component, pageProps, apolloClient }: MyAppProps) {
  * @param {NextWebVitalsMetric} metric
  */
 export function reportWebVitals(metric: NextWebVitalsMetric) {
-  const { id, name, value } = metric;
+  const { id, name, value }: NextWebVitalsMetric = metric;
 
   // Assumes the global `dataLayer` array exists, see:
   // https://developers.google.com/tag-manager/devguide
