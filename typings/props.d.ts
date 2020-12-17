@@ -13,5 +13,3 @@ declare interface CommonProps {
   children?: ReactNode | ReactNodeArray[];
   error?: ErrorType;
 }
-
-//export { ErrorType, CommonProps };
