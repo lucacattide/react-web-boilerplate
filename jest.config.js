@@ -16,13 +16,21 @@ module.exports = {
   // clearMocks: true,
 
   // Indicates whether the coverage information should be collected while executing the test
-  // collectCoverage: false,
+  collectCoverage: true,
 
   // An array of glob patterns indicating a set of files for which coverage information should be collected
   collectCoverageFrom: [
     '**/*.{js,jsx,ts,tsx}',
-    '!**/*.d.ts',
+    '!**/backend/**',
+    '!**/coverage/**',
+    '!**/e2e/**',
     '!**/node_modules/**',
+    '!**/src/**',
+    '!**/worker/**',
+    '!**/*.d.ts',
+    '!**/*.config.js',
+    '!**/*.setup.js',
+    '!**/*-preset.js',
   ],
 
   // The directory where Jest should output its coverage files
@@ -37,12 +45,7 @@ module.exports = {
   // coverageProvider: "babel",
 
   // A list of reporter names that Jest uses when writing coverage reports
-  coverageReporters: [
-    'json-summary',
-    'text',
-    'lcov',
-    //   "clover"
-  ],
+  coverageReporters: ['json-summary', 'text', 'lcov', 'clover'],
 
   // An object that configures minimum threshold enforcement for coverage results
   // coverageThreshold: undefined,
@@ -147,7 +150,7 @@ module.exports = {
   // snapshotSerializers: ['enzyme-to-json/serializer'],
 
   // The test environment that will be used for testing
-  // testEnvironment: 'jsdom',
+  testEnvironment: 'node',
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -162,7 +165,7 @@ module.exports = {
   // ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
-  testPathIgnorePatterns: ['/node_modules/', '/.next/'],
+  testPathIgnorePatterns: ['/node_modules/', '/.next/', '/e2e/'],
 
   // The regexp pattern or array of patterns that Jest uses to detect test files
   // testRegex: [],

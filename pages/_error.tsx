@@ -3,7 +3,7 @@
 // JS imports
 import { NextPage } from 'next';
 import { CommonProps, ErrorType } from '../typings/props';
-import CustomError from '../components/CustomError';
+import CustomError from './components/CustomError';
 
 // Error - Override
 const Error: NextPage<CommonProps> = ({ error }) => {

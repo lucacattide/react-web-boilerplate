@@ -1,4 +1,8 @@
 // Global
+declare interface Global {
+  __coverage__: any;
+}
+
 // Window
 declare interface Window {
   workbox: Workbox;

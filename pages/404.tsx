@@ -1,7 +1,7 @@
 // Module Start
 // JS imports
 import { NextPage } from 'next';
-import CustomError from '../components/CustomError';
+import CustomError from './components/CustomError';
 
 // 404
 const Custom404: NextPage = () => {

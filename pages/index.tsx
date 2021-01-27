@@ -6,7 +6,7 @@ import { NextPage } from 'next';
 import Head from 'next/head';
 import { useQuery } from '@apollo/client';
 import PAGE_QUERY from '../backend/queries/pages';
-import CustomError from '../components/CustomError';
+import CustomError from './components/CustomError';
 
 // Interfaces
 interface Page {

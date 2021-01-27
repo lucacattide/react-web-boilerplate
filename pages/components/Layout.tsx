@@ -1,11 +1,11 @@
 // Module Start
 // JS imports
 import React, { FC, useEffect } from 'react';
-import { CommonProps } from '../typings/props';
 import PropTypes from 'prop-types';
+import { CommonProps } from '../../typings/props';
 import Header from './Header';
 import Footer from './Footer';
-import { refresh } from '../src/utils';
+import { refresh } from '../../src/utils';
 
 // Layout
 const Layout: FC<CommonProps> = ({ children }) => {

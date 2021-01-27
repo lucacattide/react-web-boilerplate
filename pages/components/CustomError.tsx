@@ -1,7 +1,7 @@
 // Module Start
 // JS imports
 import React, { FC } from 'react';
-import { CommonProps, ErrorType } from '../typings/props';
+import { CommonProps, ErrorType } from '../../typings/props';
 
 // Error - Override
 const CustomError: FC<CommonProps> = ({ error }) => {

@@ -5,10 +5,10 @@ import '../styles/globals.css';
 import { useEffect } from 'react';
 import type { AppProps, NextWebVitalsMetric } from 'next/app';
 import Head from 'next/head';
-import withApolloClient from '../backend/with-apollo-client';
 import { ApolloProvider, ApolloClient } from '@apollo/client';
 import TagManager from 'react-gtm-module';
-import Layout from '../components/Layout';
+import withApolloClient from '../backend/with-apollo-client';
+import Layout from './components/Layout';
 
 // Types
 type TagManagerOptions = {
@@ -46,7 +46,7 @@ function MyApp({ Component, pageProps, apolloClient }: MyAppProps) {
             name="viewport"
             content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, user-scalable=no, viewport-fit=cover"
           />
-          <title></title>
+          <title />
         </Head>
         <Layout>
           <Component {...pageProps} />
